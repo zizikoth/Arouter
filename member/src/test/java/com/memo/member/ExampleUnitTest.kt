@@ -12,6 +12,7 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val ss = "a.b.c"
+        print(ss.subSequence(0,ss.lastIndexOf(".")))
     }
 }

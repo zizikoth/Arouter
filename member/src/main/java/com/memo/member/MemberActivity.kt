@@ -16,8 +16,12 @@ class MemberActivity : AppCompatActivity() {
         setContentView(R.layout.activity_member)
         title = "Member"
         mBtn.setOnClickListener {
-            val clazz = ARouter.get().getActivityClazz(RouterPath.NewsActivity)
-            startActivity(Intent(this,clazz))
+            // 方案一
+            // val clazz = ARouter.get().getActivityClazz(RouterPath.NewsActivity)
+            // startActivity(Intent(this,clazz))
+
+            // 方案二
+            ARouter.get().startActivity(RouterPath.NewsActivity)
         }
     }
 }

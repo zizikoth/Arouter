@@ -1,6 +1,5 @@
 package com.memo.utils
 
-import com.memo.member.MemberActivity
 import com.memo.router.core.ARouter
 import com.memo.router.core.IRouter
 import com.memo.router.path.RouterPath
@@ -17,7 +16,7 @@ import com.memo.router.path.RouterPath
  */
 object MemberRouter : IRouter {
 
-    override fun putActivity() {
-        ARouter.get().setActivityClazz(RouterPath.MemberActivity, MemberActivity::class.java)
-    }
+	override fun putActivity() {
+		ARouter.get().setActivityClazz(RouterPath.MemberActivity, com.memo.member.MemberActivity::class.java)
+	}
 }
