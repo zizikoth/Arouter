@@ -3,14 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:textAllCaps="false"
     tools:context=".MainActivity">
-
+    
     <Button
-        android:id="@+id/mBtnMember"
+        android:id="@+id/mBtnNews1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转Member" />
+        android:text="方案一跳转NewActivity"
+        android:textAllCaps="false" />
+    
+    <Button
+        android:id="@+id/mBtnMember1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方案一跳转MemberActivity"
+        android:textAllCaps="false" />
+    
+    
+    <Button
+        android:id="@+id/mBtnNews2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="方案二跳转NewActivity"
+        android:textAllCaps="false" />
+    
+    <Button
+        android:id="@+id/mBtnMember2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方案二跳转MemberActivity"
+        android:textAllCaps="false" />
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.memo.news
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.memo.annotation.Route
@@ -14,11 +15,13 @@ class NewsActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_news)
 		title = "News"
-		mBtn.setOnClickListener {
-			// 方案一
-			// val clazz = ARouter.get().getActivityClazz(RouterPath.MemberActivity)
-			// startActivity(Intent(this, clazz))
-			// 方案二
+		// 方案一
+		mBtn1.setOnClickListener {
+			val activityClazz = ARouter.get().getActivityClazz(RouterPath.MemberActivity)
+			startActivity(Intent(this, activityClazz))
+		}
+		// 方案二
+		mBtn2.setOnClickListener {
 			ARouter.get().startActivity(RouterPath.MemberActivity)
 		}
 	}

@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -66,7 +65,6 @@ public class ClassUtils {
 				@Override
 				public void run() {
 					DexFile dexfile = null;
-
 					try {
 						if (path.endsWith(EXTRACTED_SUFFIX)) {
 							//NOT use new DexFile(path), because it will throw "permission error in /data/dalvik-cache"
@@ -100,7 +98,7 @@ public class ClassUtils {
 
 		parserCtl.await();
 
-		Log.d("aaaa", "Filter " + classNames.size() + " classes by packageName <" + packageName + ">");
+		Log.d("ARouter", "Filter " + classNames.size() + " classes by packageName <" + packageName + ">");
 		return classNames;
 	}
 
@@ -169,11 +167,11 @@ public class ClassUtils {
 							instantRunSourcePaths.add(file.getAbsolutePath());
 						}
 					}
-					Log.d("aaaa", "Found InstantRun support");
+					Log.d("ARouter", "Found InstantRun support");
 				}
 
 			} catch (Exception e) {
-				Log.e("aaaa", "InstantRun support error, " + e.getMessage());
+				Log.e("ARouter", "InstantRun support error, " + e.getMessage());
 			}
 		}
 
@@ -216,7 +214,7 @@ public class ClassUtils {
 
 		}
 
-		Log.i("aaaa", "VM with name " + vmName + (isMultidexCapable ? " has multidex support" : " does not have multidex support"));
+		Log.i("ARouter", "VM with name " + vmName + (isMultidexCapable ? " has multidex support" : " does not have multidex support"));
 		return isMultidexCapable;
 	}
 
